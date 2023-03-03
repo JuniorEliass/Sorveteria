@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floco de neve</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="./index.html"><img class="logo" src="./imagens/logo-removebg-preview.png" alt="logo"></a>
+        <div class="direita">
+            <button id="btn-fecha" onclick="fechaSacola()">x</button>
+            <div class="sacola-icon"><img class="sacola" src="./imagens/shopping-bag-regular-24.png"
+                    alt="sacola-compras">
+
+                <div class='pagFinalizarCompra'>
+                    
+                        <div class="cartaoFormaDePagamento">
+                            <div class="cartaoDeBorda">
+                                <input class="ponto" type="radio" name="seletor" value="cartao credito">
+                                <p class="cartaoP">Cartão de Crédito</p>
+
+                            </div>
+                            <div class="cartaoDeBorda">
+                                <input class="ponto" type="radio" name="seletor" value="cartao debito">
+                                <p class="cartaoP">Cartão de Débito</p>
+
+                            </div>
+                            <div class="cartaoDeBorda">
+                                <input class="ponto" type="radio" name="seletor" value="Dinheiro">
+                                <p class="cartaoP">Dinheiro</p>
+                            </div>
+                            <div class="cartaoDeBorda">
+                                <input class="ponto" type="radio" name="seletor" value="pix">
+                                <p class="cartaoP">Pix</p>
+                            </div>
+                        </div>
+                        <div class="resumoP">
+                            <div>
+                                <p class="resumoPedido"> Resumo do Pedido</p>
+                            </div>
+                            <div class="resumo-DoPedido">
+
+                            </div>
+                            <div class="linha0">
+                                <p class="linha1"></p>
+                            </div>
+                        </div>
+                        <div class="totalPedido">
+                            <p class="totalP">Total: R$</p>
+                            <p class="total">0,00</p>
+                        </div>
+                        <div class="bordaFinalizar"></div>
+                        <button class="finalizar" onclick="window.location.reload()" >Finalizar</button>
+                    
+                </div>
+            </div>
+            <div class="menu">
+                <input type="checkbox" id="checkbox-menu" class="container__botao">
+                <label for="checkbox-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="menu__lista">
+                    <ul class="menu-lista__item">
+                        <li class="menu__item">
+                            <div onclick="exibeHome()" class="menu-lista__link">Home</div>
+                        </li>
+                        <li class="menu__item">
+                            <div onclick="exibeTelaSorvete()" class="menu-lista__link">Gelato</div>
+                        </li>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="inutil"></div>
+    <main>
+        <!-- html henderson -->
+        <section class="page1">
+
+            <div class="apresentacao">
+                <div class="texto-apresentacao">
+                    <h2 class="apresentacao_titulo">Floco de Neve</h2>
+                    <p class="apresentacao_texto">A Floco de Neve é sinônimo de qualidade e deliciosos sorvetes.
+                        Atualmente, além da variedade de sorvetes, a Floco de Neve conta também com um atendimento
+                        diferenciado.
+                        A Sorveteria Floco de Neve é assim: Produtos de qualidade, preços compatíveis, bom atendimento e
+                        inovação constante.</p>
+                </div>
+                <img class="apresentacao_imagem" src="./imagens/img-henderson1.jpeg" alt="">
+            </div>
+            <div class="produto">
+                <h1 class="produto_titulo">Produtos</h1>
+                <div class="produto_card">
+                    <img src="./imagens/img-henderson2.jpeg" class="produto-imagem">
+                </div>
+                <button class="btn-monte-seu-pedido">Monte seu gelato</button>
+                <button class="btn-monte-seu-paleta">Escolha sua paleta</button>
+            </div>
+        </section>
+        <!-- fim html henderson -->
+        <!--html john-->
+        <section class="sorvete">
+            <div class="modal-compras">
+                <h1 class="sorvete-titulo">Sabores</h1></br><p class="escolhe">Selecione no maximo 4 bolas</p></h1>
+                <div class="sorvete_sabores">
+                    <img src="./imagens/sorvete/john-morango.jpeg" alt="" class="sorvete__imagem">
+                    <div class="sorvete-menu__selecao">
+                        <h2 class="sorvete-menu__titulo">Morango:</h2>
+                        <div class="sorvete-menu__botoes" name="Morango">
+                            <button class="morango-menu_menos menu_botoes">-</button>
+                            <p class="sorvete-menu__display morango-contador">0</p>
+                            <button class="morango-menu_mais menu_botoes" name="oi">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="sorvete_titulos"></h1>
+                <div class="sorvete_sabores">
+                    <img src="./imagens/sorvete/john-chocolate.jpeg" alt="" class="sorvete__imagem">
+                    <div class="sorvete-menu__selecao">
+                        <h2 class="sorvete-menu__titulo">Chocolate:</h2>
+                        <div class="sorvete-menu__botoes">
+                            <button class="chocolate-menu_menos menu_botoes">-</button>
+                            <p class="sorvete-menu__display chocolate-contador">0</p>
+                            <button class="chocolate-menu_mais menu_botoes">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="sorvete_titulos"></h1>
+                <div class="sorvete_sabores">
+                    <img src="./imagens/sorvete/john-flocos.jpeg" alt="" class="sorvete__imagem">
+                    <div class="sorvete-menu__selecao">
+                        <h2 class="sorvete-menu__titulo">FLocos:</h2>
+                        <div class="sorvete-menu__botoes">
+                            <button class="flocos-menu_menos menu_botoes">-</button>
+                            <p class="sorvete-menu__display flocos-contador">0</p>
+                            <button class="flocos-menu_mais menu_botoes">+</button>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="sorvete_titulos"></h1>
+                <div class="sorvete_sabores">
+                    <img src="./imagens/sorvete/john-creme.jpeg" alt="" class="sorvete__imagem">
+                    <div class="sorvete-menu__selecao">
+                        <h2 class="sorvete-menu__titulo">Creme:</h2>
+                        <div class="sorvete-menu__botoes">
+                            <button class="creme-menu_menos menu_botoes">-</button>
+                            <p class="sorvete-menu__display creme-contador">0</p>
+                            <button class="creme-menu_mais menu_botoes">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sorvete_recipientes">
+                <h1 class='sorvete-recipientes-titulo'> Recipientes</h1>
+                <div class="margin_recepientes">
+                    <input type="radio" name="recipiente" value="casquinha" id="1">
+                    <img src="./imagens/sorvete/john-casquinha.jpeg" class='icon' alt="">
+                    <label class="texto" for="1">Casquinha</label>
+                </div>
+                <div class="margin_recepientes">
+                    <input type="radio" name="recipiente" value="cascao" id="2">
+                    <img src="./imagens/sorvete/john-cascao.jpeg" class="icon" alt="">
+                    <label class="texto" for="2">Cascao</label>
+                </div>
+                <div class="margin_recepientes">
+                    <input type="radio" name="recipiente" value="copinho" id="3">
+                    <img src="./imagens/sorvete/john-copinho.jpeg" class="icon" alt="">
+                    <label class="texto" for="3">Copinho</label>
+                </div>
+            </div>
+            <!-- aqui fica escolha de recipiente -->
+            <!--html carla-->
+            <div class="sorvete_recipientes">
+                <p class="sorvete-cobertura-titulo">Coberturas</p>
+                <div class="input-coberturas">
+                    <input type="checkbox" value="chocolate" class="1">
+                    <img class="icon" src="./imagens/sorvete/carla-chocolate.jpeg" alt="">
+                    <label class="texto" for="scales"> Chocolate</label>
+                </div>
+                <div class="input-coberturas">
+                    <input type="checkbox" value="morango" class="1">
+                    <img class="icon" src="./imagens/sorvete/carla-morango.jpeg" alt="">
+                    <label class="texto" for="scales"> Morango</label>
+                </div>
+                <div class="input-coberturas">
+                    <input type="checkbox" value="leite condensado" class="1">
+                    <img class="icon" src="./imagens/sorvete/carla-leite-condensado.jpeg" alt="">
+                    <label class="texto" for="scales"> Leite condensado</label>
+                </div>
+            </div>
+            <button class="btn-adiciona">Adicionar a Sacola</button>
+
+            <!--fim html carla-->
+        </section>
+        <!--fim html john-->
+        <!-- html elias-->
+
+    </main>
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape__box">
+                <h2>Funcionamento:</h2>
+                <span>12:00hrs às 22:00hrs</span>
+    </footer>
+    <!-- <script src="app.js"></script> -->
+    <script src="./exibicaoTelas.js"></script>
+    <script src="./montagemSorvete.js"></script>
+</body>
+
+</html>
